@@ -24,9 +24,9 @@ class Sorting_Program
    system('clear')
    num = []
    old_num = []
-    loop do 
-   menu_text
-   ans = gets.to_i
+   loop do 
+     menu_text
+     ans = gets.to_i
    case ans
    when 1
       num = num_gen
@@ -35,21 +35,21 @@ class Sorting_Program
      num = old_num.dup
      bub = Sort.new
      t = Benchmark.measure do
-     p bub.bubble(num)
+       p bub.bubble(num)
      end
      puts "\n Sorting completed:#{t}"
    when 3
      num = old_num.dup
      shel = Sort.new
      t = Benchmark.measure do
-     p shel.shell(num)
+       p shel.shell(num)
      end
      puts "\nSorting completed:#{t}"
    when 4
      num = old_num.dup
      ins = Sort.new
      t = Benchmark.measure do
-     p ins.insert(num)
+       p ins.insert(num)
      end
      puts "\nSorting completed:#{t}"
    when 5
