@@ -1,9 +1,13 @@
 require_relative 'sort'
 require 'colorize'
 require 'benchmark'
-
+#########################
+# All wrapped in a class#
+#########################
 class Sorting_Program
-
+########################
+#                      #
+########################
  def menu_text
  
    print "Sorting is Sorted Son\n".colorize(:yellow)
@@ -17,8 +21,9 @@ class Sorting_Program
    puts  "anything else = EXIT".colorize(:red)
 
  end
-
-
+#######################
+#                     #
+#######################
  def main_menu
   
    system('clear')
@@ -66,8 +71,9 @@ class Sorting_Program
   end
 
  end
-
-
+##################################################
+# Generate the random numbers that will be sorted#
+#################################################
  def num_gen
   
    numbers = []
@@ -87,8 +93,9 @@ class Sorting_Program
    return numbers
 
  end
-
-  
+###############################################
+#Write the generated(unsorted) numbers to file#
+###############################################
  def write_file(num)
    fp = File.new("numbers.txt", "w")
    fp.puts(num)
@@ -97,6 +104,6 @@ class Sorting_Program
  end
 
 end
-
+#main
 session = Sorting_Program.new
 session.main_menu
